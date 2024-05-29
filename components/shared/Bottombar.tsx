@@ -1,6 +1,4 @@
 "use client";
-
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -21,17 +19,10 @@ function Bottombar() {
             <Link
               href={link.route}
               key={link.label}
-              className={`bottombar_link ${isActive && "bg-primary-500"}`}
-            >
-              <Image
-                src={link.imgURL}
-                alt={link.label}
-                width={16}
-                height={16}
-                className='object-contain'
-              />
-
-              <p className='text-subtle-medium text-light-1 max-sm:hidden'>
+              className={`bottombar_link ${isActive ? "active" : ""}`}
+            >              
+              {link.lucideICON}
+              <p className="text-subtle-medium max-sm:hidden">
                 {link.label.split(/\s+/)[0]}
               </p>
             </Link>

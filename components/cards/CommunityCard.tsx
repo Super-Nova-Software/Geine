@@ -29,7 +29,7 @@ function CommunityCard({ id, name, username, imgUrl, bio, members }: Props) {
 
         <div>
           <Link href={`/communities/${id}`}>
-            <h4 className='text-base-semibold text-light-1'>{name}</h4>
+            <h4 className='text-base-semibold'>{name}</h4>
           </Link>
           <p className='text-small-medium text-gray-1'>@{username}</p>
         </div>
@@ -59,7 +59,7 @@ function CommunityCard({ id, name, username, imgUrl, bio, members }: Props) {
               />
             ))}
             {members.length > 3 && (
-              <p className='ml-1 text-subtle-medium text-gray-1'>
+              <p className='ml-1 text-subtle-medium'>
                 {members.length}+ Users
               </p>
             )}

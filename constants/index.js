@@ -1,44 +1,51 @@
+import { Home,Search,Heart,SquarePen,Users,User,Tag,Redo,BotMessageSquare } from 'lucide-react';
+
 export const sidebarLinks = [
   {
-    imgURL: "/assets/home.svg",
+    lucideICON: <Home/>,
     route: "/",
     label: "Home",
   },
   {
-    imgURL: "/assets/search.svg",
+    lucideICON: <Search />,
     route: "/search",
     label: "Search",
   },
   {
-    imgURL: "/assets/heart.svg",
+    lucideICON: <Heart />,
     route: "/activity",
     label: "Activity",
   },
   {
-    imgURL: "/assets/create.svg",
-    route: "/create-thread",
-    label: "Create Thread",
+    lucideICON: <SquarePen />,
+    route: "/create-info",
+    label: "Create Info",
   },
   {
-    imgURL: "/assets/community.svg",
-    route: "/communities",
-    label: "Communities",
+    lucideICON: <Users />,
+    route: "/Sessions",
+    label: "Sessions",
   },
   {
-    imgURL: "/assets/user.svg",
+    lucideICON:<BotMessageSquare  />,
+    route: "/profile",
+    label: "Initial diagnosis",
+  },
+  {
+    lucideICON:<User />,
     route: "/profile",
     label: "Profile",
   },
 ];
 
 export const profileTabs = [
-  { value: "threads", label: "Threads", icon: "/assets/reply.svg" },
-  { value: "replies", label: "Replies", icon: "/assets/members.svg" },
-  { value: "tagged", label: "Tagged", icon: "/assets/tag.svg" },
+  { value: "threads", label: "Posts", icon: <Redo   /> },
+  { value: "replies", label: "Replies", icon: <Users /> },
+  { value: "tagged", label: "Tagged", icon: <Tag /> },
 ];
 
 export const communityTabs = [
-  { value: "threads", label: "Threads", icon: "/assets/reply.svg" },
-  { value: "members", label: "Members", icon: "/assets/members.svg" },
-  { value: "requests", label: "Requests", icon: "/assets/request.svg" },
+  { value: "threads", label: "Threads", icon: <Redo   /> },
+  { value: "members", label: "Members", icon: <Users />  },
+  { value: "requests", label: "Requests", icon: <Users /> },
 ];

@@ -40,7 +40,7 @@ function ProfileHeader({
             <p className='text-base-medium text-gray-1'>@{username}</p>
           </div>
         </div>
-        {accountId === authUserId && type !== "Community" && (
+        {accountId === authUserId && type !== "Sessions" && (
           <Link href='/profile/edit'>
             <div className='flex cursor-pointer gap-3 rounded-lg bg-dark-3 px-4 py-2'>
               <Image
@@ -58,7 +58,7 @@ function ProfileHeader({
 
       <p className='mt-6 max-w-lg text-base-regular text-light-2'>{bio}</p>
 
-      <div className='mt-12 h-0.5 w-full bg-dark-3' />
+      <div className='mt-12 h-0.5 w-full' />
     </div>
   );
 }

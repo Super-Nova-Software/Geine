@@ -14,6 +14,14 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  chronic_disease: {
+    type: String,
+    null: true,
+  },
+  age: {
+    type: String,
+    null: true,
+  },
   image: String,
   bio: String,
   threads: [
@@ -29,7 +37,7 @@ const userSchema = new mongoose.Schema({
   communities: [
     {
       type: mongoose.Schema.Types.ObjectId,
-      ref: "Community",
+      ref: "Sessions",
     },
   ],
 });

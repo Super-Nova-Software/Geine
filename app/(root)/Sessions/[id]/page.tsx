@@ -25,7 +25,7 @@ async function Page({ params }: { params: { id: string } }) {
         username={communityDetails.username}
         imgUrl={communityDetails.image}
         bio={communityDetails.bio}
-        type='Community'
+        type='Sessions'
       />
 
       <div className='mt-9'>
@@ -33,13 +33,7 @@ async function Page({ params }: { params: { id: string } }) {
           <TabsList className='tab'>
             {communityTabs.map((tab) => (
               <TabsTrigger key={tab.label} value={tab.value} className='tab'>
-                <Image
-                  src={tab.icon}
-                  alt={tab.label}
-                  width={24}
-                  height={24}
-                  className='object-contain'
-                />
+                 {tab.icon}
                 <p className='max-sm:hidden'>{tab.label}</p>
 
                 {tab.label === "Threads" && (

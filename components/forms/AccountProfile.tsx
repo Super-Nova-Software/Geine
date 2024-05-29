@@ -116,7 +116,7 @@ const AccountProfile = ({ user, btnTitle }: Props) => {
           name='profile_photo'
           render={({ field }) => (
             <FormItem className='flex items-center gap-4'>
-              <FormLabel className='account-form_image-label'>
+              <FormLabel className=''>
                 {field.value ? (
                   <Image
                     src={field.value}
@@ -136,7 +136,7 @@ const AccountProfile = ({ user, btnTitle }: Props) => {
                   />
                 )}
               </FormLabel>
-              <FormControl className='flex-1 text-base-semibold text-gray-200'>
+              <FormControl className='flex-1 '>
                 <Input
                   type='file'
                   accept='image/*'
@@ -154,13 +154,13 @@ const AccountProfile = ({ user, btnTitle }: Props) => {
           name='name'
           render={({ field }) => (
             <FormItem className='flex w-full flex-col gap-3'>
-              <FormLabel className='text-base-semibold text-light-2'>
+              <FormLabel className=''>
                 Name
               </FormLabel>
               <FormControl>
                 <Input
                   type='text'
-                  className='account-form_input no-focus'
+                  className=''
                   {...field}
                 />
               </FormControl>
@@ -209,7 +209,7 @@ const AccountProfile = ({ user, btnTitle }: Props) => {
           )}
         />
 
-        <Button type='submit' className='bg-primary-500'>
+        <Button type='submit'>
           {btnTitle}
         </Button>
       </form>

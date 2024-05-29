@@ -64,12 +64,12 @@ function Comment({ threadId, currentUserImg, currentUserId }: Props) {
                   className='rounded-full object-cover'
                 />
               </FormLabel>
-              <FormControl className='border-none bg-transparent'>
+              <FormControl className='border-none'>
                 <Input
                   type='text'
                   {...field}
                   placeholder='Comment...'
-                  className='no-focus text-light-1 outline-none'
+                  className='text-light-1 outline-none'
                 />
               </FormControl>
             </FormItem>

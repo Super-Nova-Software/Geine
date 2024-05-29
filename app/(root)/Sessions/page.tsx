@@ -27,10 +27,10 @@ async function Page({
 
   return (
     <>
-      <h1 className='head-text'>Communities</h1>
+      <h1 className='head-text'>Sessions</h1>
 
       <div className='mt-5'>
-        <Searchbar routeType='communities' />
+        <Searchbar routeType='Sessions' />
       </div>
 
       <section className='mt-9 flex flex-wrap gap-4'>
@@ -54,7 +54,7 @@ async function Page({
       </section>
 
       <Pagination
-        path='communities'
+        path='Sessions'
         pageNumber={searchParams?.page ? +searchParams.page : 1}
         isNext={result.isNext}
       />

@@ -9,12 +9,13 @@ import LeftSidebar from "@/components/shared/LeftSidebar";
 import Bottombar from "@/components/shared/Bottombar";
 import RightSidebar from "@/components/shared/RightSidebar";
 import Topbar from "@/components/shared/Topbar";
+import { ThemeProvider } from "@/components/providers/theme-provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Threads",
-  description: "A Next.js 13 Meta Threads application",
+  title: "PainFX",
+  description: "A Next.js 13 PainFX application",
 };
 
 export default function RootLayout({
@@ -30,8 +31,8 @@ export default function RootLayout({
     >
       <html lang='en'>
         <body className={inter.className}>
+        <ThemeProvider attribute="class" defaultTheme="system"  enableSystem disableTransitionOnChange>
           <Topbar />
-
           <main className='flex flex-row'>
             <LeftSidebar />
             <section className='main-container'>
@@ -42,6 +43,7 @@ export default function RootLayout({
           </main>
 
           <Bottombar />
+          </ThemeProvider>
         </body>
       </html>
     </ClerkProvider>
